@@ -12,6 +12,7 @@ class Ship:
         # Carrega a imagem da nave e obtém seu rect
         self.image = pygame.image.load('images/ship.bmp')
         # o pygame trata os elementos como retangulos, tornando seu processamento eficiente
+        self.image = pygame.transform.scale(self.image, (80, 80))  # novo tamanho
         self.rect = self.image.get_rect()
         # Posiciona a nave no centro inferior da tela
         self.rect.midbottom = self.screen_rect.midbottom 
